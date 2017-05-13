@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  elasticsearch:
+      build: elasticsearch/
+      volumes:
+        - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      ports:
+        - "9200:9200"
+        - "9300:9300"
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+
+  web:
+    build: ./web
+    ports:
+      - "5000:5000"
+    environment:
+      - "DOCKER_MACHINE_IP=${DOCKER_MACHINE_IP}"
+networks:
+  elk:
+    driver: bridge
