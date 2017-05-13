@@ -8,7 +8,7 @@ Install docker, docker-compose (pip install docker-compose and type
 docker-compose up
 ```
 
-Then go to `http://${DOCKER_MACHINE_IP}:500/info` to access elasticsearch info page
+Then go to `http://${DOCKER_MACHINE_IP}:5000/info` to access elasticsearch info page
 
 ### TODO
 
