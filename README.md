@@ -9,7 +9,3 @@ Install docker, docker-compose (pip install docker-compose and type
 ```
 
 Then go to `http://${DOCKER_MACHINE_IP}:5000/info` to access elasticsearch info page
-
-### TODO
-
-* Improve connection between flask and elastic without using env variable.
