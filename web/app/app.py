@@ -21,11 +21,9 @@ app = Flask(__name__)
 def api_info():
     return jsonify(es.info())
 
-
 @app.route('/health')
 def api_health():
     return jsonify(es.cluster.health())
-
 
 @app.route('/')
 def api_root():
