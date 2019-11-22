@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# If DOCKER_MACHINE_IP is not set, you need to set it manually before running docker-compose up
 export DOCKER_MACHINE_IP=$(docker-machine ip)
 
 echo "**********************************************************************"
