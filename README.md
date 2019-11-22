@@ -2,9 +2,9 @@
 
 An example of REST API with Flask and Elasticsearch as backend.
 
-Install docker, docker-compose (pip install docker-compose and type
+Install docker, docker-compose (`pip install docker-compose`) and type
 
-```
+```bash
 ./startContainers.sh
 ```
 
