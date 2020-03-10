@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
   elasticsearch:
@@ -9,10 +9,16 @@ services:
         - "9200:9200"
         - "9300:9300"
       environment:
-        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+        - "cluster.name=elasticsearch"
+        - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+        - "XPACK_SECURITY_ENABLED=false"
       networks:
         - elk
-
+      healthcheck:
+        test: "curl http://elasticsearch:9200"
+        interval: "1s"
+        timeout: "3s"
+        retries: 60
   web:
     build: ./web
     restart: always
