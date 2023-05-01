@@ -2,7 +2,7 @@ appdirs==1.4.3
 Click==7.0
 elasticsearch==7.0.4
 elasticsearch-dsl==5.2.0
-Flask==1.1.1
+Flask==2.3.2
 itsdangerous==0.24
 Jinja2==2.11.3
 MarkupSafe==1.0
